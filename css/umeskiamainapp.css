@@ -1,0 +1,191 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+  cursor: pointer;
+  width: 100% !important;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+
+.btn:hover{
+  background-color: #006726;
+  color: #ffffff;
+  border: 1px solid #006726;
+  transition: all 0.2s;
+}
+
+.button__text {
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.button--loading::after {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+
+.loadercard {
+  position: fixed;
+  display: none;
+  height: 100px;
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.2); */
+  top: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* backdrop-filter: blur(5px);
+  z-index: 100; */
+}
+
+.message {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  background: #fff;
+  color: #006726;
+  padding: 10px;
+  font-style: italic;
+  margin-top: 2%;
+}
+
+.transaction {
+  animation: checking 1s linear infinite;
+}
+
+.buyairtime {
+  margin: 8px 0 0;
+  border: 0px transparent;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 40px;
+  font-size: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  background: black;
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  width: 100% !important;
+  animation: checking 1s linear infinite;
+}
+
+.buyairtime:hover {
+  background-position: 0 0;
+  color: #fff;
+  transition: all 0.5s ease;
+  background-color: #006726;
+}
+
+.notetital {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px dashed #FFFFFF10;
+  border-radius: 20px;
+  color: white;
+  padding: 10px;
+  font-style: italic;
+  margin-top: 2%;
+  text-transform: uppercase;
+}
+
+li {
+  font-weight: 600;
+  color: black;
+}
+
+
+
+@keyframes checking {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+#errmsg {
+  color: red;
+  font-size: 18px;
+  font-style: italic;
+}
+
+#MikrotikErr {
+  color: red;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.timeout-message {
+  color: rgb(23, 0, 153);
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  background-color: white;
+  padding: 16px;
+
+}
+
+#connectBtn {
+  margin: 8px 0 0;
+  border: 0px transparent;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  background: #006726;
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  animation: checking 1s linear infinite;
+}
+
+.subloadercard {
+  background-color: white;
+  text-align: center;
+  padding: 16px;
+  margin: 0 auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}

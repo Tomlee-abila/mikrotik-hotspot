@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    $(if refresh-timeout)
+    <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+    $(endif)
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no">
+    <meta data-react-helmet="true" name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="description" content="UMESKIA SOFTWARES is a Software Development Solutions and Services company.">
+    <meta name="keywords" content="UMESKIA, UMESKIA SOFTWARES, UMESIKIA SOFTWARES,UMESKIA">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <title>UMESKIA SOFTWARES WIFI HOTSPOT</title>
+    <link rel="shortcut icon" href="https://umeskiasoftwares.com/images/umeskia_s.png" />
+    <link rel="stylesheet" href="css/mainstyleapp.css">
+    <link rel="stylesheet" href="css/umeskiamainapp.css">
+    <link rel="stylesheet" href="css/mainappmainumeskia.css">
+    <link rel="stylesheet" href="css/umeskia.css">
+    <script language="JavaScript">
+        function openLogout() {
+            if (window.name != 'hotspot_status') return true;
+            open(' $(link-logout)?erase-cookie=true', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+            window.close();
+            return false;
+        }
+    </script>
+
+
+</head>
+
+<body $(if advert-pending=='yes' ) onLoad="openAdvert()" $(endif)>
+    <section class="actions-strata">
+        <div class="formDiv">
+            <div class="form">
+                <div class="container">
+                    <div class="typed-out">UMESKIA SOFTWARES HOTSPOT</div>
+                </div>
+                <img src="https://umeskiasoftwares.com/images/umeskia_s.png" alt="">
+                <div class="ie-fixMinHeight">
+                    <div class="main">
+                        <div class="wrap">
+                            $(if login-by == 'trial')
+                            <h1 class="sucess-login">Hi, trial user!</h1>
+                            $(elif login-by != 'mac')
+                            <h1 class="sucess-login"></h1>
+                            $(endif)
+                            <form action=" $(link-logout)?erase-cookie=true" name="logout"
+                                onSubmit="return openLogout()">
+
+                                <table id="customers">
+                                    <tr>
+                                        <td>Station</td>
+                                        <td>$(identity)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td id="name"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ref ID</td>
+                                        <td id="refid"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Amount Paid</td>
+                                        <td id="amount"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Access Code</td>
+                                        <td id="usercode">$(username)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Logged in Mac</td>
+                                        <td>$(mac)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IP address</td>
+                                        <td>$(ip)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bytes up / down</td>
+                                        <td>$(bytes-in-nice) / $(bytes-out-nice)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Start Time</td>
+                                        <td id="start"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Expiration Time</td>
+                                        <td id="stop"></td>
+                                    </tr>
+                                    $(if session-time-left)
+                                    <tr>
+                                        <td>Connected Time</td>
+                                        <td>$(uptime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Time Left</td>
+                                        <td> $(session-time-left)</td>
+                                    </tr>
+                                    $(else)
+                                    <tr>
+                                        <td>Connected</td>
+                                        <td>$(uptime)</td>
+                                    </tr>
+                                    $(endif)
+                                    $(if blocked == 'yes')
+                                    <tr>
+                                        <td>Status</td>
+                                        <td>
+                                            <a href="$(link-advert)" target="hotspot_advert">Advertisement required</a>
+                                        </td>
+                                    </tr>
+                                    $(elif refresh-timeout)
+                                    <tr>
+                                        <td>Status refresh</td>
+                                        <td>$(refresh-timeout)</td>
+                                    </tr>
+                                    $(endif)
+                                </table>
+                                $(if login-by-mac != 'yes')
+                                <!-- user manager link. if user manager resides on other router, replace $(hostname) by its address
+                    <button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button>
+                     <!--end of user manager link -->
+                                <input type="submit" value="Log out">
+
+                                $(endif)
+                            </form>
+
+                           <a href="http://umeskiasoftwares.com/kredotap/" target="_blank"> <button class="buyairtime">TOPUP AIRTIME</button></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const usercode = document.getElementById('usercode').innerHTML;
+        const name = document.getElementById('name');
+        const refid = document.getElementById('refid');
+        const amount = document.getElementById('amount');
+        const start = document.getElementById('start');
+        const stop = document.getElementById('stop');
+        console.log(usercode);
+        var url = "https://api.umeskiasoftwares.com/api/v1/userData";
+        const userData = 'usercode=' + usercode;
+        var userDataReq = new XMLHttpRequest();
+        userDataReq.open("POST", url, true);
+        userDataReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        userDataReq.onload = () => {
+            if (userDataReq.status == "200") {
+                let result = JSON.parse(userDataReq.response);
+                if (result.ResultCode == "200") {
+                    name.innerHTML = result.name;
+                    refid.innerHTML = result.refID;
+                    amount.innerHTML = "Ksh " + result.amount;
+                    start.innerHTML = result.start;
+                    stop.innerHTML = result.stop;
+                } else if (result.ResultCode == "201") {
+                    name.innerHTML = "Default";
+                    refid.innerHTML = "Default";
+                    amount.innerHTML = "Default";
+                    start.innerHTML = "Default";
+                    stop.innerHTML = "Default";
+                }
+            }
+        }
+        userDataReq.send(userData);
+    </script>
+</body>
+
+</html>

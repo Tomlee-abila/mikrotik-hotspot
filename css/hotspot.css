@@ -1,0 +1,244 @@
+.package-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.connect-container {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+
+
+.ad-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.small-cat-card {
+    display: none;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.small-cat-card p {
+    margin: 0;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.header {
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-round {
+    border-radius: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+}
+
+.form-control {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.oration-btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-group-append {
+    flex: 0 0 auto;
+}
+
+
+
+#otp-input {
+    display: none;
+}
+
+#countdown {
+    display: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#mobilename {
+    display: none;
+}
+
+#deskotopname {
+    display: block;
+}
+
+/* Chat Container Styles */
+#chatContainer {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 999;
+}
+
+#chatHeader {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#chatMessages {
+    padding: 10px;
+    overflow-y: auto;
+    height: calc(100% - 100px);
+}
+
+#chatInput {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#chatInput input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#sendButton {
+    background-color: #000000;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Floating Chat Icon Styles */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #020202;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Phone Number Form Styles */
+#phoneForm {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+#phoneForm label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#phoneForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+
+/* Payment Instructions Styles */
+#paymentInstructions {
+    display: none;
+}
+
+#paymentInstructions p {
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 576px) {
+    .small-cat-card {
+        display: block;
+    }
+
+    .package-card {
+        display: none;
+    }
+
+    .btn-group {
+        display: none;
+    }
+
+    #mobilename {
+        display: block;
+    }
+
+    #deskotopname {
+        display: none;
+    }
+}

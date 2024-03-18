@@ -1,0 +1,458 @@
+body {
+  background: white !important;
+  font: 14px/1 "Open Sans", helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  animation: gradient 8s ease infinite;
+  background-size: 20% 20%;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  border-radius: 20%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px;
+}
+
+.ads {
+  text-align: center;
+  width: 100%;
+  margin:0 auto;
+}
+
+.ads img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin: auto;
+  border-radius: 8px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes wave {
+  from {
+    transform: rotate(0deg);
+  }
+
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+.formDiv {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  text-align: center;
+  font-weight: lighter;
+  align-items: center;
+}
+
+.form {
+  width: 68%;
+  background:white;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 25px 25px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.typed-out {
+  overflow: hidden;
+  border-right: 0.15em solid rgb(0, 0, 0);
+  color: #000;
+  font-size: 25px;
+  font-weight: 800;
+  text-align: center;
+  width: 0;
+  animation: typing 1s steps(20, end) forwards, blink 0.8s infinite;
+}
+
+.container {
+  display: inline-block;
+  width: 100%;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+
+  to {
+    border-color: rgb(0, 0, 0);
+  }
+}
+
+input {
+  width: 100%;
+  padding: 15px 25px;
+  margin-bottom: 2%;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  box-shadow: 
+    rgba(197, 197, 197, 0.25) 0px 30px 60px -12px inset, 
+    rgba(222, 222, 222, 0.3) 0px 18px 36px -18px inset;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: black;
+  outline: none;
+  resize: none;
+  display: inline-block;
+  transition: 0.2s ease all;
+}
+
+/* Remove default input outline */
+input:focus {
+  outline: none;
+}
+
+
+
+#code-sum{
+   border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 2%;
+  font-size: 10px;
+  font-weight: 400;
+  text-decoration: none;
+  background: black;
+  padding: 12px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+#code-sum:hover{
+  background-color: #006726;
+  background-position: 0 0;
+  color: #fff;
+  transition: all 0.5s ease;
+
+}
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+button:hover {
+  box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0);
+  background-position: 0 0;
+  color:#006726;
+}
+
+.accessInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+  -webkit-appearance: none;
+}
+
+/* Data Packages */
+
+section.actions-strata>.packages>.title-section {
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+}
+
+section.actions-strata>.packages>.title-section .inner-sec-title {
+  display: flex;
+  align-items: center;
+}
+
+section.actions-strata>.packages>.title-section>.underline {
+  height: 4px;
+  background-color: rgba(0, 16, 49, 0.35);
+}
+
+section.actions-strata>.packages>.title-section .network-img {
+  width: 60px;
+  height: 60px;
+}
+
+.packages>.cards-x {
+  margin: 2%;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  text-align: center;
+  overflow: hidden;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.packages>.cards-x>.card {
+  position: relative;
+  height: 190px;
+  padding: 20px;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #3d3d3d15;
+  box-shadow: 1px 1px 5px #3d3d3d20;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+
+.card-footer {
+  background-color: #000000;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #39584550;
+  color: #fff;
+  font-size: 10px;
+  padding: 12px 25px;
+  position: absolute;
+  bottom: 10px;
+  align-self: center;
+  letter-spacing: 1px;
+  transition: 0.2s;
+  width: 50%;
+  height: 20px;
+}
+
+.card-footer:hover {
+  background-color: #006726;
+}
+
+.card-footer a {
+  color: inherit;
+  font-weight: bolder;
+}
+
+.packages .card:after {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 25, 0.05);
+}
+
+.packages>.cards-x>.card>.price {
+  margin-right: 15px;
+}
+
+.packages>.cards-x>.card>.price :nth-child(1) {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 7px;
+  color: rgb(0, 0, 0);
+}
+
+.packages>.cards-x>.card>.price :nth-child(2) {
+  font-size: 50px;
+  font-weight: 900;
+  color: rgb(0, 0, 0);
+}
+
+.packages>.cards-x>.card>.data-amount {
+  align-self: center;
+}
+
+.packages>.cards-x>.card>.data-amount :nth-child(1) {
+  font-size: 40px;
+  font-weight: 900;
+  color: #006726;
+}
+
+.packages>.cards-x>.card>.data-amount :nth-child(2) {
+  font-weight: 700;
+  margin-left: 3px;
+  text-transform: uppercase;
+}
+
+.packages>.cards-x>.card>.validity-period {
+  margin-top: 20px;
+  align-self: center;
+  display: flex;
+}
+
+section#footer {
+  margin-top: 40px;
+  font-family: "Poppins", sans-serif;
+  padding: 40px;
+  font-weight: 800;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+
+  .form {
+    width: 95%;
+    margin: auto;
+    padding: 25px 25px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .xlx2 {
+    text-align: center;
+  }
+
+  .xlx2 .title {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+  }
+
+  section.actions-strata {
+    width: 96%;
+    margin-left: 2%;
+  }
+
+  section.actions-strata>.enter-code>form>.lb-input-acc>input {
+    border: none;
+    background-color: rgb(95, 95, 95);
+    padding: 20px;
+    width: 100%;
+    color: #ffffff;
+    letter-spacing: 1.09px;
+    font-size: medium;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    outline: black solid 2px;
+  }
+
+  section.actions-strata>.enter-code>form>button {
+    padding: 15px;
+    width: 100%;
+    border: 0px transparent;
+    cursor: pointer;
+    color: white;
+    border-radius: 50px;
+    padding: 12px 48px;
+    margin-left: 0;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    text-decoration: none;
+    background: black;
+    margin-bottom: 40px;
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    box-shadow: 0 16px 32px 0 rgba(0, 40, 120, 0.35);
+    transition: all 0.5s ease;
+  }
+
+  /* Data Packages */
+
+  section.actions-strata>.packages>.title-section .inner-sec-title {
+    display: flex;
+    align-items: center;
+  }
+
+  section.actions-strata>.packages>.title-section>.underline {
+    height: 4px;
+    background-color: rgba(0, 16, 49, 0.35);
+    display: none;
+  }
+
+  section#footer {
+    margin-top: 40px;
+    font-family: "Poppins", sans-serif;
+    padding: 40px;
+    font-weight: 800;
+    text-align: center;
+  }
+}
+
+/* TOOL TIP */
+.tooltip {
+  background: #000000;
+  padding: 5px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  min-height: 90px;
+  width: 100%;
+  position: absolute;
+  border-radius: 5px;
+  z-index: 150px;
+  color: #ffffff;
+  transition: 1s;
+  font-family: "Poppins", sans-serif;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  display: none;
+}
+
+.tooltip .sq-head {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(45deg);
+  position: absolute;
+  bottom: -11px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.tooltip button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+  padding: 10px;
+  background-color: rgba(109, 158, 255, 0.35);
+  border: none;
+  color: white;
+}
+
+.tooltip button:active {
+  background-color: white;
+}
+
+.tooltip .hidden {
+  opacity: 0;
+}
+
+.tooltip .shown {
+  opacity: 1;
+}
+
+

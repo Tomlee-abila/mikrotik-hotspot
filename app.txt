@@ -1,0 +1,67 @@
+
+
+
+
+U61239
+
+
+
+DELETE FROM hotspotCodes WHERE plancode='U61239' AND status='unused'
+
+
+{
+:global today
+:global bulan
+:global tahunx
+{
+:local date [ /system clock get date ]
+:local montharray ( "jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec" )
+:local monthdays ( 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 )
+:local days [ :pick $date 4 6 ]
+:local monthtxt [ :pick $date 0 3 ]
+:local year [ :pick $date 7 11 ]
+:local months ([ :find $montharray $monthtxt]  )
+:for nodays from=0 to=$months do={
+:set days ( $days + [ :pick $monthdays $nodays ] )
+}
+:set days ($days + $year * 365)
+:set today $days
+:set bulan $months
+:set tahunx $year
+}
+:foreach i in [/ip hotspot user find where disabled=no ] do={
+:if ([ :find [/ip hotspot user get $i comment ] ] = 0 ) do={
+:local date [/ip hotspot user get $i comment ]
+:local pecah [:toarray [:pick $date ([:find $date ":"]+1) [:len $date]]]
+:local tgl [:pick $pecah 1]
+:local tglx [:pick $tgl 0 [:find $tgl "-"]]
+:local waktux [:toarray [:pick $tgl ([:find $tgl "-"]+1) [:len $tgl]]]
+:local tahun [ :pick $tglx 7 11 ]
+:if ([:len $tahun] != 0) do={
+:local montharray ( "jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec" )
+:local monthdays ( 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 )
+:local days [ :pick $tglx 4 6 ]
+:local monthtxt [ :pick $tglx 0 3 ]
+:local year [ :pick $tglx 7 11 ]
+:local months ( [ :find $montharray $monthtxt ] )
+:for nodays from=0 to=$months do={
+:set days ( $days + [ :pick $monthdays $nodays ] )
+}
+:set days ($days + $year * 365)
+:if ( $tahunx >= $year ) do={
+:if ( $bulan >= $months ) do={
+:if ( $days <= $today ) do={
+:local waktu [/system clock get time]
+:if ( $waktu >= $waktux ) do={
+:local name [/ip hotspot user get $i name]
+:log info "user $name di disabel karena masa valid sudah habis"
+[ /ip hotspot user disable $i ]
+[ /ip hotspot active remove [find where user=$name] ]
+}
+}
+}
+}
+}
+}
+}
+}

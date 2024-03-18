@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no">
+  <meta data-react-helmet="true" name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="description" content="UMESKIA SOFTWARES is a Software Development Solutions and Services company.">
+  <meta name="keywords" content="UMESKIA, UMESKIA SOFTWARES, UMESIKIA SOFTWARES,UMESKIA">
+  <meta property="og:image" content="https://umeskiasoftwares.com/images/umeskia_s.png">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="css/mainstyleapp.css">
+  <link rel="stylesheet" href="css/umeskiamainapp.css">
+  <link rel="stylesheet" href="css/mainappmainumeskia.css">
+  <link rel="shortcut icon" href="https://umeskiasoftwares.com/images/umeskia_s.png" />
+  <title>UMESKIA SOFTWARES WIFI HOTSPOT</title>
+  
+</head>
+
+<body>
+
+  <div class="page" id="page">
+
+    <section class="actions-strata" id="accessform">
+      <div class="tooltip">
+        <p></p>
+        <button id="tyo">Next</button>
+        <div class="sq-head"></div>
+      </div>
+      $(if chap-id)
+      <form name="sendin" action="$(link-login-only)" method="post">
+        <input type="hidden" name="username" />
+        <input type="hidden" name="password" />
+        <input type="hidden" name="dst" value="$(link-orig)" />
+        <input type="hidden" name="popup" value="false" />
+      </form>
+
+      <script type="text/javascript" src="md5.js"></script>
+      <script type="text/javascript">
+        function doLogin() {
+          document.sendin.username.value = document.login.username.value;
+          document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+          document.sendin.submit();
+          return false;
+        }
+      </script>
+      $(endif)
+      <div class="loadercard" id="lodercard">
+        <div class="subloadercard">
+          <img src="img/loader.gif" class="transaction">
+          <div class="message">Processing your Mpesa payment........</div>
+        </div>
+      </div>
+      <div class="formDiv">
+        <form class="form" name="login" action="$(link-login-only)" method="post" $(if chap-id)
+          onSubmit="return doLogin()" $(endif)>
+          <div class="connectpanel">
+
+            <img src="https://umeskiasoftwares.com/images/umeskia_s.png" alt="">
+            <div id="MikrotikErr">
+              $(if error) $(error) $(endif)
+            </div>
+            <div id="errmsg"></div>
+            <input type="hidden" name="dst" value="$(link-orig)" />
+            <input type="hidden" name="popup" value="false" />
+
+            <label class="lb-input-acc" for="access-code">
+              <input id="code" oninput="userTpass(this)" name="username" type="text" value="$(username)"
+                placeholder="Enter access code to connect" class="input-field" required />
+            </label>
+            <label class="lb-input-acc" for="access-code">
+              <input id="pass" name="password" type="hidden" placeholder="Password" class="input-field" required />
+            </label>
+            <button id="code-sum" class="btn" type="submit">
+              <span class="button__text">CONNECT TO INTERNET</span>
+            </button>
+
+
+            <section class="note">
+              <h2>IMPORTANT NOTE</h2>
+              <ul>
+                <li> <span style="color:black;  "> If you did'nt recieve
+                    the
+                    code after payment
+                    click <a style="color:rgb(0, 85, 45);"
+                      href="https://wifi.umeskiasoftwares.com/search">Here</a></span>
+                </li><br>
+                <li> <span style="color:black;  "> Dial *456*9*5*5# to unblock promotional messages</span></li><br>
+                <li> <span style="color:black;  "> For assistance call / Whatsapp : <span style="color:rgb(0, 85, 45);"
+                      id="ccno"></span></span></li>
+                <li> <span style="color:black;  "> How to connect click <a
+                      style="color:rgb(0, 85, 45); font-size: 15px ;"
+                      href="https://umeskiasoftwares.com/ums?bp=JTG8R5ZN9qlu">Here</a></span>
+              </ul>
+              <br>
+              <br>
+              <br>
+              <a href="http://umeskiasoftwares.com/kredotap/" class="buyairtime">TOPUP AIRTIME </a>
+            </section>
+          </div>
+        </form>
+      </div>
+
+
+
+
+
+      <div class="packages">
+        <div class="cards-x" id="stationPackage">
+
+        </div>
+      </div>
+
+
+    </section>
+
+
+    <section id="alertform">
+      <img src="https://umeskiasoftwares.com/images/umeskia_s.png" alt="">
+      <hr>
+      <div class="msg">
+        <p id="msginfo"></p>
+      </div>
+      <section
+        style="font-weight:500; font-size:15px; padding:10%;text-align: left;  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px; font-family: 'Poppins', sans-serif; ">
+        <h4 style="color: green; text-transform: lowercase;">HOTSPOT INSTALLED SUCCESSFULLY, PLEASE CREATE & ACTIVE
+          HOTSPOT PLAN TO CONTINUE</h4>
+        <br>
+        <a href="http://umeskiasoftwares.com/kredotap/" class="buyairtime">TOPUP AIRTIME </a>
+      </section>
+      <br><br>
+      <div class="abstract">For integration vist umeskiasoftwares.com &copy 2022 Developed By
+        <a href="https://umeskiasoftwares.com/" style="text-decoration: none;">Umeskia
+          Softwares</a>
+      </div>
+    </section>
+
+
+
+    </section>
+    <section id="footer">
+      <div class="notetital">Advertisements</div>
+      <br><br>
+      <div class="ads" id="ads"></div>
+      <br><br>
+
+      <div class="abstract" style="margin-top: 18px;">For Hotspot integration vist www.umeskiasoftwares.com &copy 2022 -
+        <span id='currentYearData'></span>
+      </div>
+      <div style="margin-top: 18px">
+        <span>Developed By</span>
+        <a href="https://umeskiasoftwares.com/" style="text-decoration: none; color: #FFFFFF">Umeskia
+          Softwares</a>
+      </div>
+    </section>
+    <script type="text/javascript" id="zsiqchat">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "siq774d0c1b35b28844b9ce6a62cc6d8d1852b5c3903ea95967e9f5b5e5e58ec685", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zohopublic.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
+  </div>
+  <!--Start of Tawk.to Script-->
+  <!-- <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/65c899260ff6374032cbb8d2/1hmbpcge7';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script> -->
+  <!--End of Tawk.to Script-->
+  <script>
+    const currentYearData = document.getElementById("currentYearData");
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    currentYearData.innerHTML = currentYear;
+    const theButton = document.querySelector(".btn");
+    theButton.addEventListener("click", () => {
+      theButton.classList.add("button--loading");
+    });
+  </script>
+  <script src="jquery.min.js"></script>
+  <script>
+    fetch('stationdata.json')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        const hotspotStationId = data.stationid;
+        //const hotspotStationId = "UMS26595527";
+        const params = 'stationId=' + hotspotStationId;
+        var stationPackage = document.getElementById('stationPackage');
+        var ccno = document.getElementById('ccno');
+        var ccnoass = document.getElementById('ccnoass');
+        var accessform = document.getElementById('accessform');
+        var alertform = document.getElementById('alertform');
+        var msginfo = document.getElementById('msginfo');
+        var footer = document.getElementById('footer');
+        var ads = document.getElementById('ads');
+        let dataUrl = "https://api.umeskiasoftwares.com/api/v1/hotspotplans";
+        let request = new XMLHttpRequest();
+        request.open("POST", dataUrl, true);
+        request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        request.onload = () => {
+          if (request.status == "200") {
+            let result = JSON.parse(request.response);
+            //console.log(result);
+            if (result.ResultCode == "200") {
+              let statationPakages = result.statationPakages;
+              let coustomercareno = result.coustomercare;
+              let adsImage = result.adsImage;
+              ads.innerHTML = adsImage;
+              alertform.style.display = "none";
+              ccno.innerHTML = coustomercareno;
+              for (var i = 0; i < statationPakages.length; i++) {
+                var planOfType = statationPakages[i].plantype;
+                var typePlanMsg = "";
+                stationPackage.innerHTML += '<div class="card" onclick="window.location.href=\'https://wifi.umeskiasoftwares.com/payment?amount=' + statationPakages[i].price + '&st=' + statationPakages[i].plancode + '\'"><div class="price"><span>ksh</span><span>' + statationPakages[i].price + '</span></div><div class="data-amount"><span>' + statationPakages[i].numExpration + '</span><span>' + statationPakages[i].stringExpiration + ' </span><br><div class="view-more-content">[<small style="font-size:10px;">' + statationPakages[i].devices + ' <span style="color:black; font-size:10px;">Devices</span></small> ][ <small style="font-size:10px;">' + statationPakages[i].planConType + '</small> ][ <small style="font-size:12px; font-weight:600;"><span style="color:black; font-size:10px;">Validity </span>' + statationPakages[i].validity + '</small>]</div></div><div class="card-footer"><a style="text-decoration: none;"href="https://wifi.umeskiasoftwares.com/payment?amount=' + statationPakages[i].price + '&st=' + statationPakages[i].plancode + '">Subscribe</a></div></div>';
+              }
+            } else if (result.ResultCode == "201") {
+              console.log("Error");
+              let adsImage = result.adsImage;
+              ads.innerHTML = adsImage;
+              alertform.style.display = "block";
+              accessform.style.display = "none";
+              footer.style.display = "none";
+              let coustomercareno = result.coustomercare;
+              ccnoass.innerHTML = coustomercareno;
+              msginfo.innerHTML = result.massage;
+            }
+          } else {
+            console.log("Error");
+          }
+        }
+        request.send(params);
+      })
+      .catch(error => console.error(error));
+  </script>
+
+  <script>
+    document.onkeydown = function (e) {
+      if (e.ctrlKey &&
+        (e.keyCode === 67 ||
+          e.keyCode === 86 ||
+          e.keyCode === 85 ||
+          e.keyCode === 117)) {
+        return false;
+      } else {
+        return true;
+      }
+    };
+    $(document).keypress("u", function (e) {
+      if (e.ctrlKey) {
+        return false;
+      } else {
+        return true;
+      }
+    });
+  </script>
+  <script>
+    var errMsg = document.getElementById("errmsg");
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var failMsg = url.searchParams.get("fail");
+    if (failMsg != '' && failMsg != null) {
+      errMsg.innerHTML = failMsg;
+    }
+  </script>
+  <script>
+    var accesscode = null;
+    var inputvalueCode = document.getElementById("code");
+    var inputvaluePass = document.getElementById("pass");
+    var url_string = window.location.href; //window.location.href
+    var url = new URL(url_string);
+    var accesscode = url.searchParams.get("ac");
+    if (accesscode != '' && accesscode != null) {
+      var datavalue = accesscode.toString();
+      inputvalueCode.value = datavalue;
+      inputvaluePass.value = datavalue;
+      document.getElementById("code-sum").click();
+    }
+  </script>
+
+
+
+  <script>
+    var connectBtn = document.getElementById("connectBtn");
+    connectBtn.addEventListener("click", function () {
+      //GET THE PAYMENT ID
+      var url_string = window.location.href; //window.location.href
+      var url = new URL(url_string);
+      var paymentId = url.searchParams.get("paymentId");
+      window.location.href = "https://wifi.umeskiasoftwares.com/getcode?payid=" + paymentId;
+    });
+  </script>
+  <script>
+    window.jQuery || document.write('<script src="js/js5.js"><\/script>')
+  </script>
+  <script type="text/javascript">
+    document.login.username.focus();
+  </script>
+  <script>
+    function userTpass(xer) {
+      const pass = document.getElementById('pass')
+      pass.value = xer.value
+    }
+  </script>
+  <script>
+    const howitworks = document.getElementById("howitworks");
+
+    howitworks.addEventListener("click", function () {
+      howItWorks();
+    });
+
+    function howItWorks() {
+      const button = document.getElementById("code-sum");
+      const inputCode = document.getElementById("code");
+      const tooltip = document.getElementsByClassName("tooltip")[0];
+      const packageFirst = document.getElementById("stationPackage");
+      const ptrToolTip = document.querySelector(".tooltip > .sq-head");
+      tooltip.style.display = "block";
+      class ToolTip {
+        constructor(width, clientX, clientY) {
+          this.width = width;
+          this.clientX = clientX;
+          this.clientY = clientY;
+        }
+      }
+      Object.prototype.tooltipMetrics = function tooltipMetrics() {
+        return {
+          width: this.width,
+          ptrOri: Math.floor(Math.random() * this.width),
+          pos: {
+            x: this.clientX,
+            y: this.clientY
+          },
+        };
+      };
+
+      // positions for mapping objects
+      //ck-package //input
+      const indicesArrgMetaData = [packageFirst, inputCode, button];
+
+      //Messages to be rendered
+      const indicesArrgMetaDataMsg = [
+        "Click  one of the package then pay to receive an access code via SMS.",
+        "Enter the access code you received via sms here",
+        "Click connect to process your hotspot connection.",
+      ];
+
+
+      function frameInstanceToolTip(x, chargeMui) {
+
+        const metadataZ = x.getBoundingClientRect();
+        const instance = new ToolTip(metadataZ.width, metadataZ.x, metadataZ.y);
+        const {
+          width,
+          ptrOri,
+          pos
+        } = instance.tooltipMetrics();
+
+
+        //local deps setup
+        ptrToolTip.style.right =
+          ptrOri > 10 && ptrOri < width / 2 ? ptrOri + "px" : 20 + "px";
+        tooltip.style.top = (pos.y - (tooltip.scrollHeight + 20)) + "px";
+        tooltip.style.left = pos.x + "px";
+        tooltip.style.width = width + "px";
+
+        document.querySelector(".tooltip p").textContent =
+          indicesArrgMetaDataMsg[chargeMui];
+
+
+        if (chargeMui == 2 && width < 220) {
+          tooltip.style.top = (pos.y - (tooltip.scrollHeight + 100)) + "px";
+          tooltip.style.paddingBottom = 50 + "px"
+        }
+      }
+
+      var count = 0;
+      var maxCount = indicesArrgMetaData.length - 1;
+
+      function nextElem() {
+        if (count <= maxCount) {
+
+          document.querySelector(".tooltip #tyo").style.backgroundColor = "rgba(109, 158, 255, 0.35)"
+          document.querySelector(".tooltip #tyo").textContent = "Next"
+
+          //console.log(indicesArrgMetaData[count], count);
+          //console.log(indicesArrgMetaData[0])
+          frameInstanceToolTip(indicesArrgMetaData[count], count);
+
+          if (count == maxCount) {
+            document.querySelector(".tooltip #tyo").style.backgroundColor = "darkred"
+            document.querySelector(".tooltip #tyo").textContent = "Close"
+          }
+        } else {
+          count = 0;
+          return nextElem();
+        }
+        count++;
+      }
+
+
+      document.querySelector(".tooltip #tyo").addEventListener("click", () => {
+        nextElem();
+        if (document.querySelector(".tooltip #tyo").textContent == "Close") {
+          document.querySelector(".tooltip #tyo").removeEventListener("click", () => console.log("cleanup"))
+          document.querySelector(".tooltip #tyo").addEventListener("click", () => {
+            tooltip.style.opacity = 0
+          })
+
+        }
+      });
+
+      nextElem();
+    }
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var scrollToTopButton = document.querySelector(".scroll-to-top");
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 0) {
+          scrollToTopButton.classList.add("active");
+        } else {
+          scrollToTopButton.classList.remove("active");
+        }
+      });
+    });
+
+  </script>
+  <div class="scroll-to-top">
+    <a href="#top">↑ Scroll to Top ↑</a>
+  </div>
+</body>
+
+<html>

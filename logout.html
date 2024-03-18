@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no">
+    <meta data-react-helmet="true" name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="description" content="UMESKIA SOFTWARES is a Software Development Solutions and Services company.">
+    <meta name="keywords" content="UMESKIA, UMESKIA SOFTWARES, UMESIKIA SOFTWARES,UMESKIA">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <title>UMESKIA SOFTWARES WIFI HOTSPOT</title>
+    <link rel="shortcut icon" href="https://umeskiasoftwares.com/images/umeskia_s.png" />
+    <link rel="stylesheet" href="css/mainstyleapp.css">
+    <link rel="stylesheet" href="css/umeskiamainapp.css">
+    <link rel="stylesheet" href="css/mainappmainumeskia.css">
+    <link rel="stylesheet" href="css/umeskia.css">
+    <script>
+        function openLogin() {
+            if (window.name != 'hotspot_logout') return true;
+            open('$(link-login)', '_blank', '');
+            window.close();
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <section class="actions-strata">
+        <div class="formDiv">
+            <form class="form">
+                <div class="container">
+                    <div class="typed-out">UMESKIA SOFTWARES HOTSPOT</div>
+                </div>
+                <img src="https://umeskiasoftwares.com/images/umeskia_s.png" alt="">
+                <div class="ie-fixMinHeight">
+                    <div class="main">
+                        <div class="wrap">
+                            <h1 class="error-logout">User $(username) logged out! ☹</h1>
+                            <table id="customers">
+                                <tr>
+                                    <td>Username</td>
+                                    <td>$(username)</td>
+                                </tr>
+                                <tr>
+                                    <td>IP address</td>
+                                    <td>$(ip)</td>
+                                </tr>
+                                <tr>
+                                    <td>MAC address</td>
+                                    <td>$(mac)</td>
+                                </tr>
+                                <tr>
+                                    <td>Session time</td>
+                                    <td>$(uptime)</td>
+                                </tr>
+                                $(if session-time-left)
+                                <tr>
+                                    <td>Time left</td>
+                                    <td>$(session-time-left)</td>
+                                </tr>
+                                $(endif)
+                                <tr>
+                                    <td>Bytes up / down:</td>
+                                    <td>$(bytes-in-nice) / $(bytes-out-nice)</td>
+                                </tr>
+                            </table>
+                            <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+
+                                <input type="submit" value="Log in">
+                            </form>
+                            <a href="http://umeskiasoftwares.com/kredotap/" target="_blank"> <button
+                                    class="buyairtime">TOPUP AIRTIME</button></a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
